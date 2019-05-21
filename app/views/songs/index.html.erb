@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Songs</h1>
+<ul>
+    <% @songs.each do |song| %>
+  <li>     <b> <%=  song.title%></b>    </li>
+  <li> Available: <%=  song.released%></li>
+  <li>  year: <%=  song.release_year%></li>
+  <li>  artist:<%=  song.artist_name%></li>
+  <li>   genre: <%=  song.genre%></li>
+  <br>
+  <% end %>
+</ul>
+
+<%= link_to "Add Song", new_song_path %>
+  </body>
+</html>
